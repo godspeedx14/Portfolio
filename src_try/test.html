@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Button Animation</title>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .button-container {
+      width: 300px;
+      height: 150px;
+      position: relative;
+      border: 1px solid #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .expand-button {
+      padding: 10px 20px;
+      font-size: 20px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Global circle for full-body animation */
+    .global-fill {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      background-color: #4caf50;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      transition: width 0.6s ease-in, height 0.6s ease-in;
+    }
+
+    .global-fill.expanding {
+      width: 200vw;
+      height: 200vh;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="button-group">
+    <!-- Button 1 -->
+    <div class="button-container">
+      <button class="expand-button" onclick="animateButtonFullBody()">
+        Go to Link 1
+      </button>
+    </div>
+
+    <!-- Button 2 -->
+    <div class="button-container">
+      <button class="expand-button" onclick="animateButtonFullBody()">
+        Go to Link 2
+      </button>
+    </div>
+
+    <!-- Button 3 -->
+    <div class="button-container">
+      <button class="expand-button" onclick="animateButtonFullBody()">
+        Go to Link 3
+      </button>
+    </div>
+  </div>
+
+  <!-- Global expanding circle for full-body fill -->
+  <div class="global-fill" id="global-fill"></div>
+
+  <script>
+    // Fill the full body on button click
+    function animateButtonFullBody() {
+      const globalFill = document.getElementById("global-fill");
+      globalFill.classList.add("expanding");
+
+      // Optional: Redirect after animation
+      setTimeout(() => {
+        window.location.href = "https://plus-one-dimension.web.app/";
+      }, 600);
+    }
+  </script>
+</body>
+
+</html>

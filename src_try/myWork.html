@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>My Software Projects</title>
+  <link rel="stylesheet" href="packages/css/styles.css" />
+  <link rel="stylesheet" href="packages/css/myWork.css" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head>
+
+<body>
+  <!--==================== HEADER ====================-->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">Manas Tripathi</a>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list grid">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link">
+              <i class="uil uil-estate nav__icon"></i>Home
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="myWork.html" class="nav__link">
+              <i class="uil uil-user nav__icon"></i>myWork
+            </a>
+          </li>
+          <!-- <li class="nav__item">
+                            <a href="#skills" class="nav__link">
+                                <i class="uil uil-file-alt nav__icon"></i>Skills
+                            </a>
+                        </li> -->
+          <!-- <li class="nav__item">
+                            <a href="index.html#services" class="nav__link">
+                                <i class="uil uil-briefcase-alt nav__icon"></i>Skills
+                            </a>
+                        </li> -->
+          <!-- <li class="nav__item">
+                            <a href="portfolio.html" class="nav__link">
+                                <i class="uil uil-scenery nav__icon"></i>Portfolio                                
+                            </a>
+                        </li> -->
+          <li class="nav__item">
+            <a href="contact.html" class="nav__link">
+              <i class="uil uil-message nav__icon"></i>Contact
+            </a>
+          </li>
+        </ul>
+        <i class="uil uil-times nav__close" id="nav-close"></i>
+      </div>
+      <div class="nav__btns">
+        <!-- Theme change button -->
+
+        <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="uil uil-apps"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!--==================== BODY ====================-->
+  <div class="container">
+    <h1>My Projects</h1>
+    <div class="projects">
+      <div class="project">
+        <img src="packages/images/portfolio1.jpg" alt="Project 1" class="project-image" />
+        <div class="project-info">
+          <h2>Project 1: House Quest 3d</h2>
+          <p>
+            Designed a webinterface using JavaScript, CSS, HTML to access the
+            project online. A 3D editable environment using Unreal Engine and
+            Unity. interface to edit virtual objects and showing object info
+            when come near them.
+          </p>
+          <div class="technologies">
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">Unity</span>
+            <span class="tech-tag">Blender</span>
+            <span class="tech-tag">Html</span>
+            <span class="tech-tag">Css</span>
+            <span class="tech-tag">Javascript</span>
+          </div>
+          <div class="project-links">
+            <!-- <a href="https://plus-one-dimension.web.app/" target="_blank">Live Demo</a> -->
+            <div class="button-container"><button class="expand-button"
+                onclick="animateButton(this, 'https://plus-one-dimension.web.app/')">
+                <img src="packages/images/link.png" alt="icon" class="button-icon">Live Demo
+              </button></div>
+            <a href="https://github.com/godspeedx14/HouseQuest3D" target="_blank">View Repository</a>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- 2nd  -->
+      <div class="project">
+        <img src="packages/images/portfolio2.png" alt="Project 2" class="project-image" />
+        <div class="project-info">
+          <h2>Project 2: E-commerce Platform</h2>
+          <p>
+            A scalable e-commerce solution featuring product management, user
+            authentication, shopping cart functionality, and secure payment
+            integration. This project demonstrates my ability to create
+            complex, production-ready web applications.Various Ecommerce
+            functionaity implemented using React Js. Login and Database
+            Mangement Using Firebase. Payement Functionality using Stripe.
+          </p>
+          <div class="technologies">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">Stripe</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Html</span>
+            <span class="tech-tag">Css</span>
+          </div>
+          <div class="project-links">
+            <!-- <a href="https://fir-b9562.web.app/" target="_blank">Live Demo</a> -->
+            <div class="button-container"><button class="expand-button"
+                onclick="animateButton(this,'https://fir-b9562.web.app/')">
+                <img src="packages/images/link.png" alt="icon" class="button-icon">Live Demo
+              </button></div>
+            <a href="https://github.com/godspeedx14/Ecommerce-site-v9" target="_blank">View Repository</a>
+
+
+
+
+          </div>
+          <!-- here -->
+
+          <!-- <div class="project-button">
+              <a href="#" target="_blank">
+                <img src="your-image-url.png" alt="icon" />
+                View Repository
+              </a>
+            </div> -->
+          <!-- //here -->
+        </div>
+      </div>
+
+      <!-- 3rd -->
+      <div class="project">
+        <img src="packages/images/portfolio3.png" alt="Project 1" class="project-image" />
+        <div class="project-info">
+          <h2>Project 3: Indoor Navigation via Argumented reality</h2>
+          <p>
+            Added Inside building navigation functionality of IIT jodhpur campus in App built using Unity with ARCore
+            sdk by
+            google. With location accuracy that is 90% more precise than GPS, with a precision radius of 0.5 meters
+            compared to
+            GPS’s 5 meters
+          </p>
+          <div class="technologies">
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">Unity</span>
+            <span class="tech-tag">Flutter</span>
+            <span class="tech-tag">Blender</span>
+          </div>
+          <div class="project-links">
+            <!-- <a href="https://drive.google.com/file/d/1T-0sjjtmKaFolZKXGPwwdi_YRUPQXapp/view?usp=sharing"
+              target="_blank">Live Demo</a> -->
+            <div class="button-container"><button class="expand-button"
+                onclick="animateButton(this,'https://drive.google.com/file/d/1T-0sjjtmKaFolZKXGPwwdi_YRUPQXapp/view?usp=sharing')">
+                <img src="packages/images/link.png" alt="icon" class="button-icon">Live Demo
+              </button></div>
+            <a href="https://docs.google.com/document/d/1FTxdSzQMwYa-xu4qDekI_cr20vQpvfRCPc93rJARkbc/edit"
+              target="_blank">Research paper</a>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- 4th -->
+      <div class="project">
+        <img src="packages/images/portfolio4.png" alt="Project 4" class="project-image" />
+        <div class="project-info">
+          <h2>Project 4: Virtual Tour of Mahakumbh</h2>
+          <p>
+            Virtual Map Of Sangam
+            People Can Pre-visit ground virtually to plan Trip
+            Find different Pathways
+
+            Information
+            Find particular Places (Tent ,Boating area)
+            Get knowledge regarding Prices
+            Danger zone(marked)
+          </p>
+          <div class="technologies">
+            <span class="tech-tag">Unreal Engine</span>
+            <span class="tech-tag">Blender</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Html</span>
+            <span class="tech-tag">Css</span>
+          </div>
+          <div class="project-links">
+            <!-- <a href="https://manastripathi.itch.io/mahakumbh-odyssey" target="_blank">Live Demo</a> -->
+            <div class="button-container"><button class="expand-button"
+                onclick="animateButton(this,'https://manastripathi.itch.io/mahakumbh-odyssey')">
+                <img src="packages/images/link.png" alt="icon" class="button-icon">Live Demo
+              </button></div>
+            <a href="https://github.com/godspeedx14/Mahakumbh-Odyssey--Unreal-Adventure" target="_blank">View
+              Repository</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5th -->
+      <div class="project">
+        <img src="packages/images/portfolio5.png" alt="Project 5" class="project-image" />
+        <div class="project-info">
+          <h2>Project 5: LoadAssigner</h2>
+          <p>
+            A Online portal to collect Teacher’s Choices and Admin panel.Assign Best teacher for each subject, based on
+            their Choice and their past performance.Ensure everyone get an balance workload.Admin panel to inc/dec
+            workload , increase no. of teachers in a subject.<span id="dots">...</span><span id="more">
+
+              It will lead to a web page that has option to signin using Gmail account. By using it teachers can set
+              their
+              preferences
+              of subjects and their info related to that subject, which will calculate a score for them . All this info
+              is
+              stored in
+              our database. And in an Excel sheet available to admin.
+
+              Home page of website also have admin section that can be accessed by clicking on small gear symbol ⚙️ on
+              top
+              right
+              corner that will toggle admin section: (username: admin , password:123) this will allow you to see table
+              for
+              each
+              subject with ranking of teachers in it.
+              In backend, whenever Admin pannel is accessed it pull all teachers name from backend and create a object
+              data structure
+              for each subject that holds a fix no. Of teachers in it .
+
+              When a teacher is pulled from database, it try to place it in teacher's first preference, if there's empty
+              space in that
+              subject the teacher gets inserted in it otherwise new teacher try to replace a already existing teacher
+              based on score,
+              if successful the already existing teacher is removed and a new location is allocated to him based on his
+              preferences.
+              However if the new teacher is not able to replace anyone of old teacher in the subject then his next
+              preference is
+              checked for another subject and same process is repeated till he gets placed. Every teacher is placed in
+              one
+              or more
+              subjects as per admin need.
+
+            </span></p>
+
+          <button onclick="more()" id="myBtn" class="read-more-btn">Read more</button>
+
+          <div class="technologies">
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Html</span>
+            <span class="tech-tag">Css</span>
+          </div>
+          <div class="project-links">
+            <!-- <a href="https://subjectallocater.web.app/" target="_blank">Live Demo</a> -->
+            <div class="button-container"><button class="expand-button"
+                onclick="animateButton(this,'https://subjectallocater.web.app/')">
+                <img src="packages/images/link.png" alt="icon" class="button-icon">Live Demo
+              </button></div>
+            <a href="https://github.com/godspeedx14/LoadAssigner" target="_blank">View Repository</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 6th -->
+      <div class="project">
+        <img src="packages/images/portfolio6.png" alt="Project 6" class="project-image" />
+        <div class="project-info">
+          <h2>Project 6: The Social Network</h2>
+          <p>
+            the social networking site that helps you stay in touch with your friends, family, and colleagues. Connect
+            is
+            more than
+            just a platform for sharing photos, videos, and messages. It is also a place where you can discover new
+            interests, join
+            communities, and learn new skills. Whether you want to chat with your old classmates, find a job
+            opportunity,
+            or watch a
+            live stream of your favorite celebrity, Connect has something for everyone.
+          </p>
+
+
+          <div class="technologies">
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Html</span>
+            <span class="tech-tag">Css</span>
+          </div>
+          <div class="project-links">
+            <!-- <a href="https://subjectallocater.web.app/" target="_blank">Live Demo</a> -->
+            <div class="button-container"><button class="expand-button"
+                onclick="animateButton(this,'https://connectus-x.web.app/')">
+                <img src="packages/images/link.png" alt="icon" class="button-icon">Live Demo
+              </button></div>
+            <a href="#" target="_blank">View Repository</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Add more project here -->
+    </div>
+  </div>
+  </div>
+  <script>
+    function animateButton(button, link) {
+      const buttonContainer = button.parentElement;
+      buttonContainer.classList.add("clicked");
+
+      // Wait for the animation to finish before redirecting
+      setTimeout(() => {
+        window.location.href = link;
+      }, 600); // Matches the 0.6s transition duration
+    }
+
+
+    function more() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moreText.style.display = "inline";
+      }
+    }
+  </script>
+
+  <script src="./packages/js/swiper-bundle.min.js"></script>
+  <script src="./packages/js/main.js"></script>
+</body>
+
+</html>
