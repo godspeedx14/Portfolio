@@ -194,10 +194,10 @@ const getCurrentIcon = () =>
 if (selectedTheme) {
   // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
   document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
-    darkTheme
+    darkTheme,
   );
   themeButton.classList[selectedIcon === "uil-moon" ? "add" : "remove"](
-    iconTheme
+    iconTheme,
   );
 }
 
@@ -209,4 +209,100 @@ themeButton.addEventListener("click", () => {
   // We save the theme and the current icon that the user chose
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
+});
+
+//image presentation in 3d model
+const galleries = [
+  {
+    type: "images",
+    selector: '[data-type="images"]',
+    sources: [
+      "packages/images/gallery/1.jpg",
+      "packages/images/gallery/2.png",
+      "packages/images/gallery/3.png",
+      "packages/images/gallery/4.png",
+      "packages/images/gallery/5.png",
+      "packages/images/gallery/6.jpg",
+      "packages/images/gallery/7.png",
+      "packages/images/gallery/8.png",
+      "packages/images/gallery/9.png",
+      "packages/images/gallery/10.png",
+      "packages/images/gallery/10.png",
+    ],
+  },
+  {
+    type: "video",
+    selector: '[data-type="video"]',
+    sources: [
+      "packages/images/gallery/1.mp4",
+      "packages/images/gallery/2.mp4",
+      "packages/images/gallery/3.mp4",
+    ],
+  },
+];
+
+galleries.forEach((gallery) => {
+  const container = document.querySelector(gallery.selector);
+  if (!container) return;
+
+  // if (gallery.type === "video") {
+  //   const video = document.createElement("video");
+  //   video.src = gallery.sources[0];
+  //   video.muted = true;
+  //   video.loop = true;
+  //   video.playsInline = true;
+  //   video.classList.add("active");
+  //   container.appendChild(video);
+  //   video.play();
+  // }
+
+  if (gallery.type === "video") {
+    let current = 0;
+    const videos = [];
+
+    gallery.sources.forEach((src, i) => {
+      const v = document.createElement("video");
+      v.preload = "none"; //to improve performance lazy loading
+      v.src = src;
+      v.muted = true;
+      v.loop = false; // important: slideshow handles looping
+      v.playsInline = true;
+      if (i === 0) v.classList.add("active");
+      container.appendChild(v);
+      videos.push(v);
+    });
+
+    videos[0].play();
+
+    setInterval(() => {
+      videos[current].pause();
+      videos[current].classList.remove("active");
+
+      current = (current + 1) % videos.length;
+
+      videos[current].currentTime = 0;
+      videos[current].classList.add("active");
+      videos[current].play();
+    }, 20000); //change time here
+  }
+
+  if (gallery.type === "images") {
+    let current = 0;
+    const slides = [];
+
+    gallery.sources.forEach((src, i) => {
+      const img = document.createElement("img");
+      img.loading = "lazy"; //to improve performance lazy loading
+      img.src = src;
+      if (i === 0) img.classList.add("active");
+      container.appendChild(img);
+      slides.push(img);
+    });
+
+    setInterval(() => {
+      slides[current].classList.remove("active");
+      current = (current + 1) % slides.length;
+      slides[current].classList.add("active");
+    }, 2500);
+  }
 });
