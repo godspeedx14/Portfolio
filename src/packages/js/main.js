@@ -292,7 +292,7 @@ galleries.forEach((gallery) => {
 
     gallery.sources.forEach((src, i) => {
       const img = document.createElement("img");
-      img.loading = "lazy"; //to improve performance lazy loading
+      // img.loading = "lazy"; //to improve performance lazy loading
       img.src = src;
       if (i === 0) img.classList.add("active");
       container.appendChild(img);
